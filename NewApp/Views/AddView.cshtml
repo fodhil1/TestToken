@@ -1,0 +1,27 @@
+﻿@*@{
+        ViewBag.Title = "AddView";
+    }
+
+    <h2>AddView</h2>*@
+
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <ul id="menu">
+
+            <li>
+                @Html.DisplayFor(modelItem => item.Address)
+            </li>
+            <li>
+                @Html.DisplayFor(modelItem => item.City)
+                <br />
+            </li>
+
+            <li>
+                @Html.DisplayFor(modelItem => item.Id)
+            </li>
+        </ul>
+    }
+}  
